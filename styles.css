@@ -1,0 +1,187 @@
+/* ====== Base (applies to all pages) ====== */
+:root{
+  --primary: #2E4057;     /* deep blue */
+  --accent:  #EE583F;     /* coral */
+  --soft:    #FFF7EE;     /* cream background */
+  --gold:    #C7B65E;     /* warm highlight */
+  --text:    #131C26;     /* font color option 2 */
+}
+
+*{
+  box-sizing: border-box;
+}
+
+body{
+  margin: 0;
+  font-family: Arial, Calibri, sans-serif;   /* Typography Option 2 vibe */
+  color: var(--text);
+  background: var(--soft);
+  line-height: 1.5;
+}
+
+/* Keep content from stretching too wide */
+main{
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+/* ====== Header + Nav ====== */
+header{
+  background: white;
+  border-bottom: 4px solid var(--primary);
+  padding: 12px 16px;
+}
+
+header img{
+  width: 140px;           /* Fix huge logo */
+  height: auto;
+  vertical-align: middle;
+}
+
+header h1{
+  display: inline-block;
+  margin: 0 0 0 10px;
+  font-size: 28px;
+  vertical-align: middle;
+}
+
+nav{
+  margin-top: 10px;
+}
+
+nav a{
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+nav a:hover,
+nav a:focus{
+  text-decoration: underline;
+  outline: none;
+}
+
+/* ====== Headings ====== */
+h2{
+  color: var(--primary);
+  margin-top: 0;
+}
+
+/* ====== Buttons ====== */
+button{
+  background: var(--accent);
+  color: white;
+  border: none;
+  padding: 10px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+button:hover,
+button:focus{
+  filter: brightness(0.95);
+}
+
+/* ====== Images ====== */
+img{
+  max-width: 100%;
+}
+
+/* ====== Footer ====== */
+footer{
+  background: white;
+  border-top: 4px solid var(--primary);
+  padding: 16px;
+  margin-top: 24px;
+}
+
+footer p{
+  margin: 6px 0;
+}
+
+/* ====== Homepage sections ====== */
+section{
+  background: white;
+  padding: 14px;
+  margin: 14px 0;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+}
+
+ul{
+  margin-top: 6px;
+}
+
+/* ====== Gallery table (3x3) ====== */
+table{
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+}
+
+td, th{
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: center;
+  vertical-align: top;
+}
+
+td img{
+  width: 160px;
+  height: auto;
+}
+
+/* Make “View Cart” stand out */
+.view-cart{
+  display: inline-block;
+  margin-bottom: 12px;
+}
+
+/* ====== Forms ====== */
+form{
+  background: white;
+  padding: 14px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  max-width: 600px;
+}
+
+label{
+  font-weight: bold;
+}
+
+input, textarea{
+  width: 100%;
+  padding: 10px;
+  margin-top: 6px;
+  margin-bottom: 12px;
+  border: 1px solid #aaa;
+  border-radius: 6px;
+  font-family: inherit;
+  color: var(--text);
+}
+
+/* ====== Simple Responsive (mobile-friendly) ====== */
+@media (max-width: 700px){
+  header h1{
+    display: block;
+    margin: 10px 0 0 0;
+    font-size: 24px;
+  }
+
+  nav a{
+    display: inline-block;
+    margin: 6px 10px 0 0;
+  }
+
+  td img{
+    width: 120px;
+  }
+
+  main{
+    padding: 12px;
+  }
+}
