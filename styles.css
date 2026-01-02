@@ -1,10 +1,10 @@
-/* ====== Base (applies to all pages) ====== */
+
 :root{
-  --primary: #2E4057;     /* deep blue */
-  --accent:  #EE583F;     /* coral */
-  --soft:    #FFF7EE;     /* cream background */
-  --gold:    #C7B65E;     /* warm highlight */
-  --text:    #131C26;     /* font color option 2 */
+  --primary: #2E4057;     
+  --accent:  #EE583F;     
+  --soft:    #FFF7EE;     
+  --gold:    #C7B65E;     
+  --text:    #131C26;     
 }
 
 *{
@@ -13,20 +13,19 @@
 
 body{
   margin: 0;
-  font-family: Arial, Calibri, sans-serif;   /* Typography Option 2 vibe */
+  font-family: Arial, Calibri, sans-serif; 
   color: var(--text);
   background: var(--soft);
   line-height: 1.5;
 }
 
-/* Keep content from stretching too wide */
+
 main{
   max-width: 1000px;
   margin: 0 auto;
   padding: 16px;
 }
 
-/* ====== Header + Nav ====== */
 header{
   background: white;
   border-bottom: 4px solid var(--primary);
@@ -34,7 +33,7 @@ header{
 }
 
 header img{
-  width: 140px;           /* Fix huge logo */
+  width: 140px;           
   height: auto;
   vertical-align: middle;
 }
@@ -63,13 +62,11 @@ nav a:focus{
   outline: none;
 }
 
-/* ====== Headings ====== */
 h2{
   color: var(--primary);
   margin-top: 0;
 }
 
-/* ====== Buttons ====== */
 button{
   background: var(--accent);
   color: white;
@@ -85,12 +82,10 @@ button:focus{
   filter: brightness(0.95);
 }
 
-/* ====== Images ====== */
 img{
   max-width: 100%;
 }
 
-/* ====== Footer ====== */
 footer{
   background: white;
   border-top: 4px solid var(--primary);
@@ -102,7 +97,6 @@ footer p{
   margin: 6px 0;
 }
 
-/* ====== Homepage sections ====== */
 section{
   background: white;
   padding: 14px;
@@ -115,7 +109,6 @@ ul{
   margin-top: 6px;
 }
 
-/* ====== Gallery table (3x3) ====== */
 table{
   width: 100%;
   border-collapse: collapse;
@@ -134,13 +127,11 @@ td img{
   height: auto;
 }
 
-/* Make “View Cart” stand out */
 .view-cart{
   display: inline-block;
   margin-bottom: 12px;
 }
 
-/* ====== Forms ====== */
 form{
   background: white;
   padding: 14px;
@@ -164,7 +155,6 @@ input, textarea{
   color: var(--text);
 }
 
-/* ====== Simple Responsive (mobile-friendly) ====== */
 @media (max-width: 700px){
   header h1{
     display: block;

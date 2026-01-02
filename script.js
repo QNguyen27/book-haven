@@ -1,7 +1,6 @@
-/* ========= SHOPPING CART (sessionStorage) ========= */
+
 
 function getCart() {
-  // If nothing saved yet, return an empty array
   const cartString = sessionStorage.getItem("cartItems");
   return cartString ? JSON.parse(cartString) : [];
 }
@@ -16,7 +15,6 @@ function addItemToCart(item) {
   saveCart(cart);
 }
 
-// Add to Cart buttons
 const addCartButtons = document.querySelectorAll(".addCartBtn");
 
 addCartButtons.forEach((btn) => {
@@ -32,13 +30,11 @@ addCartButtons.forEach((btn) => {
   });
 });
 
-// View Cart modal
 const viewCartBtn = document.getElementById("viewCartBtn");
 const cartModal = document.getElementById("cartModal");
 const cartItemsDiv = document.getElementById("cartItems");
 const closeCartBtn = document.getElementById("closeCartBtn");
 
-// Open modal + display items
 function renderCart() {
   if (!cartItemsDiv) return;
 
@@ -71,7 +67,6 @@ if (closeCartBtn && cartModal) {
   });
 }
 
-// Clear Cart button
 const clearCartBtn = document.getElementById("clearCartBtn");
 
 if (clearCartBtn) {
@@ -82,7 +77,6 @@ if (clearCartBtn) {
   });
 }
 
-// Process Order button
 const processOrderBtn = document.getElementById("processOrderBtn");
 
 if (processOrderBtn) {
@@ -93,8 +87,6 @@ if (processOrderBtn) {
   });
 }
 
-
-/* ========= CUSTOM ORDER FORM (localStorage) ========= */
 
 const contactForm = document.getElementById("contactForm");
 
@@ -111,15 +103,12 @@ if (contactForm) {
 
     localStorage.setItem("customOrder", JSON.stringify(data));
 
-    // PROOF it saved:
     alert(localStorage.getItem("customOrder"));
 
     contactForm.reset();
   });
 }
 
-
-/* ========= SUBSCRIBE (all pages) ========= */
 
 const subscribeBtn = document.getElementById("subscribeBtn");
 
